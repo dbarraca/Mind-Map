@@ -1,0 +1,61 @@
+.board {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  left: 0;
+  top: 0;
+  padding: 1em;
+}
+
+.board-title {
+  margin: 0;
+}
+
+/* #ff65a3, #feff9c */
+.note {
+  width: 12em;
+  height: 12em;
+  padding: 1em;
+  box-shadow: 1px 2px 5px rgba(0,0,0,.35);
+  margin: 1em;
+  border-radius: 3px;
+  position: absolute;
+  transition: z-index .3s, opacity .6s, width .7s, height .7s;
+  opacity: .9;
+}
+
+.note:hover {
+  z-index: 1000;
+  opacity: 1;
+  /* width: 30em;
+  height: 18em; */
+}
+
+.note .title {
+  font-weight: 600;
+  margin: 0;
+  border:none;
+  background-color: transparent;
+  padding: 4px;
+  border-radius: 4px;
+  /* box-shadow: 0 2px 3px -2px rgba(0,0,0,.2); */
+}
+
+.note .title:focus {
+  background-color: rgba(255,255,255,.5);
+  border: 1px solid rgba(0,0,0,.25);
+} 
+
+.drag {
+  height: 2em;
+  width: 2em;
+  position: absolute;
+  left: calc(-2em - 2px);
+  top: 0px;
+  opacity: 0;
+  transition: opacity .3s;
+}
+
+.note:hover .drag {
+  opacity: 1;
+}

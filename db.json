@@ -1,0 +1,28 @@
+{
+  "notes": [
+    {
+      "id": 1,
+      "title": "Grocery List",
+      "color": "#fffba2",
+      "x": 221,
+      "y": 480,
+      "parentId": 0
+    },
+    {
+      "id": 2,
+      "title": "Art Project",
+      "color": "#8efcff",
+      "x": 812,
+      "y": 224,
+      "parentId": 0
+    },
+    {
+      "id": 3,
+      "title": "Dentist Appointment",
+      "color": "#ff7eb9",
+      "x": 1375,
+      "y": 202,
+      "parentId": 1
+    }
+  ]
+}
