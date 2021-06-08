@@ -3,26 +3,47 @@
     {
       "id": 1,
       "title": "Grocery List",
-      "color": "#fffba2",
-      "x": 221,
-      "y": 480,
-      "parentId": 0
+      "color": "yellow",
+      "x": 167,
+      "y": 205,
+      "parentId": 0,
+      "body": "<p>Hello World!</p><p>acsaasc</p><p>Some initial <strong>bold</strong> text</p>"
     },
     {
       "id": 2,
       "title": "Art Project",
-      "color": "#8efcff",
-      "x": 812,
-      "y": 224,
-      "parentId": 0
+      "color": "blue",
+      "x": 1053,
+      "y": 237,
+      "parentId": 0,
+      "body": "<p>Hello World!</p><p><br></p><p>Some initial <strong>bold</strong> text</p>"
     },
     {
       "id": 3,
       "title": "Dentist Appointment",
-      "color": "#ff7eb9",
-      "x": 1375,
-      "y": 202,
-      "parentId": 1
+      "color": "pink",
+      "x": 845,
+      "y": 540,
+      "parentId": 1,
+      "body": "<p>Hello World!</p><p><br></p><p>Some initial <strong>bold</strong> texta</p><p>ascsacaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaascasc</p>"
+    },
+    {
+      "id": 4,
+      "title": "New Note",
+      "body": "<p>HGsdv</p>",
+      "color": "yellow",
+      "parentId": 0,
+      "x": 743,
+      "y": 407
+    },
+    {
+      "id": 5,
+      "title": "Make To Do Lists",
+      "body": "<p><br></p>",
+      "color": "yellow",
+      "parentId": 0,
+      "x": 229,
+      "y": 650
     }
   ]
 }

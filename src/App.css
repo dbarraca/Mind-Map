@@ -4,24 +4,55 @@
   width: 100vw;
   left: 0;
   top: 0;
-  padding: 1em;
+  /* padding: 1em; */
+  background-image: url('img/creampaper_bw.png');
+  background-repeat: repeat;
 }
 
 .board-title {
   margin: 0;
+  box-shadow: 0 7px 7px -8px rgb(0 0 0 / 50%);
+  text-align: center;
+  padding: .25em 0;
+  background-color: rgba(255, 255, 255, .1)
 }
 
 /* #ff65a3, #feff9c */
 .note {
-  width: 12em;
-  height: 12em;
+  /* width: 12em;
+  height: 12em; */
+  min-width: 10em;
+  min-height: 2em;
   padding: 1em;
+  padding: .5em;
   box-shadow: 1px 2px 5px rgba(0,0,0,.35);
+  background-color: #FFF;
   margin: 1em;
   border-radius: 3px;
   position: absolute;
   transition: z-index .3s, opacity .6s, width .7s, height .7s;
-  opacity: .9;
+  opacity: .95;
+  display: flex;
+  flex-direction: column;
+  /* max-width: 20em; */
+  /* background-image: url('img/creampaper_bw.png');
+  background-repeat: repeat; */
+  max-width: 300px;
+}
+
+.yellow {
+  /* background-color: #fffba2; */
+  border: 1px solid #fffba2;
+}
+
+.pink {
+  /* background-color: #ff7eb9; */
+  border: 1px solid #ff7eb9;
+}
+
+.blue {
+  /* background-color: #8efcff; */
+  border: 1px solid #8efcff;
 }
 
 .note:hover {
@@ -29,6 +60,7 @@
   opacity: 1;
   /* width: 30em;
   height: 18em; */
+  background-image: none;
 }
 
 .note .title {
@@ -37,7 +69,10 @@
   border:none;
   background-color: transparent;
   padding: 4px;
-  border-radius: 4px;
+  /* border-radius: 4px; */
+  font-size: 16px;
+  padding: 8px;
+  border-bottom: 1px solid #CCC;
   /* box-shadow: 0 2px 3px -2px rgba(0,0,0,.2); */
 }
 
@@ -59,3 +94,77 @@
 .note:hover .drag {
   opacity: 1;
 }
+
+.ql-editor {
+  padding: 8px 10px;
+}
+
+
+/* quill */
+/* .ql-toolbar.ql-snow {
+  border: 1px solid transparent;
+} */
+
+/* .note:not(focus) .ql-editor {
+  padding:0;
+  line-height:inherit;
+}
+
+.note:not(focus) .ql-editor p {
+  margin-bottom:10px;
+}
+
+.note:not(focus) .ql-toolbar {
+  display:none;
+}
+
+.note:not(focus) .ql-container.ql-snow {
+  border:none;
+  font-family:inherit;
+  font-size:inherit;
+} */
+
+
+
+
+.hideEditor .ql-editor {
+  /* padding: 0; */
+  line-height: inherit;
+}
+
+.hideEditor .ql-editor p {
+  /* margin-bottom: 10px; */
+}
+
+.hideEditor .ql-toolbar {
+  display: none;
+}
+
+.hideEditor .ql-container.ql-snow {
+  /* border:none; */
+  border: 1px solid transparent;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+
+
+
+/* .hideEditor.ql-editor {
+  padding:0;
+  line-height:inherit;
+}
+
+.hideEditor.ql-editor p {
+  margin-bottom:10px;
+}
+
+.hideEditor.ql-toolbar {
+  display:none;
+}
+
+.hideEditor.ql-container.ql-snow {
+  border:none;
+  font-family:inherit;
+  font-size:inherit;
+} */

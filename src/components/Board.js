@@ -1,6 +1,6 @@
 import Note from './Note';
 
-const Board = ({ notes, onDragEnd, onTitle }) => {
+const Board = ({ notes, onAdd, onMove, onTitle, onEditBody }) => {
 
     const allowDrop = (e) =>{
         e.preventDefault();
@@ -8,15 +8,14 @@ const Board = ({ notes, onDragEnd, onTitle }) => {
 
     const dropNote = (e) => {
         e.preventDefault();
-        console.log("dropped in board");
     }
 
     return (
-        <div className="board" onDrop={(e) => dropNote(e)} onDragOver={(e) => allowDrop(e)}>
+        <div className="board" onDrop={(e) => dropNote(e)} onDragOver={(e) => allowDrop(e)} onDoubleClick={(e) => onAdd(e)}>
             <h1 className="board-title">Board</h1>
-
+            
             {notes.map((note) => (
-                <Note key={note.id} note={note} onDragEnd={onDragEnd} onTitle={onTitle}/>
+                <Note key={note.id} note={note} onMove={onMove} onTitle={onTitle} onEditBody={onEditBody}/>
             ))}
         </div>
     );
