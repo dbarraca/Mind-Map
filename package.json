@@ -1,0 +1,25 @@
+{
+  "name": "mind-map",
+  "version": "1.0.0",
+  "description": "Mind Map is a note taking web application. Board are a way to get a quick glance at your organized notes on a specific topic. Freely decide what notes go where. One useful feature allow you to open up note as boards themselves to see that note's sub-notes.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "frontend": "cd frontend && npm start",
+    "backend": "cd backend && npm start",
+    "dev": "concurrently \"cd backend && npm start\" \"cd frontend && npm start\" " 
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dbarraca/Mind-Map.git"
+  },
+  "author": "Daniel Barraca",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dbarraca/Mind-Map/issues"
+  },
+  "homepage": "https://github.com/dbarraca/Mind-Map#readme",
+  "dependencies": {
+    "concurrently": "^6.2.0"
+  }
+}

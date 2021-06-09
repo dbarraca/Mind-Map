@@ -1,13 +1,21 @@
 # dependencies
+/node_modules
+
+/backend/node_modules
+
 /frontend/node_modules
 /frontend/.pnp
 /frontend/.pnp.js
 
+/backend/config/keys.js
+/backend/.env
+
+
 # testing
-/frontend//coverage
+/frontend/coverage
 
 # production
-/frontend//build
+/frontend/build
 
 # misc
 /frontend/.DS_Store

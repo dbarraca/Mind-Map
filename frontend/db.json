@@ -44,6 +44,15 @@
       "parentId": 0,
       "x": 229,
       "y": 650
+    },
+    {
+      "id": 6,
+      "title": "Note here",
+      "body": "<p><br></p>",
+      "color": "yellow",
+      "parentId": 0,
+      "x": 701,
+      "y": 222
     }
   ]
 }
