@@ -1,11 +1,11 @@
 # Mind Map
 
-Mind Map is a note taking web application. Board are a way to get a quick glance at your organized notes on a specific topic. Freely decide what notes go where. One useful feature allow you to open up note as boards themselves to see that note's sub-notes.
+Mind Map is a note taking web application. Boards are a way to get a quick glance at your organized notes on a specific topic. Freely decide what notes go where. One useful feature allow you to open up note as boards themselves to see that note's sub-notes.
 
 ## To-Do List
 
 ### Back-End
-- [ ] Set up Mongo Database
+- [x] Set up Mongo Database
 - [ ] Populate DB with Notes
 - [ ] Populate DB with first Board
 - [ ] Fetch Board and notes from DB

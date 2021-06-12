@@ -6,11 +6,17 @@ const path = require('path');
 
 require('dotenv').config();
 
-
 const app  = express();
 app.use(cors());
 app.use(bodyParser.json());
 app.use(express.json());
+
+// CORS
+app.use((req, res, next) => {
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+    next();
+});
 
 
 // // Set up DB for local deploy
@@ -27,7 +33,6 @@ app.use(express.json());
 // .catch(err => console.log(err));
 
 const uri = process.env.ATLAS_URI;
-console.log(uri);
 mongoose.connect(
     uri,
     {
@@ -38,8 +43,6 @@ mongoose.connect(
 )
 .catch(err => {
     console.log(`DB Connection Error: ${err.message}`);
-    console.log(err);
-
 });
 
 const connection = mongoose.connection;
@@ -47,7 +50,9 @@ connection.once('open', () => {
     console.log("MongoDB database connection established successfully");
 });
 
-
+// Note Routes
+var noteRouter = require('./routes/note');
+app.use('/notes', noteRouter);
 
 const port = process.env.PORT || 5000;
 
