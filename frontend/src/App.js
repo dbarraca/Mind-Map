@@ -33,10 +33,7 @@ function App() {
 
   // Add new note 
   const addNote = async (e) => {
-    const noteCount = fetchNotes().length;
-
     const addedNote = {
-      id: noteCount + 1,
       title: "",
       body: "",
       color: "yellow",
@@ -62,9 +59,11 @@ function App() {
   // Edit note body
   const updateNoteBody = async (value, id) => {
     const noteToUpdate = await fetchNote(id);
-    const updatedNote = {...noteToUpdate, body: value }
+    const updatedNote = { ...noteToUpdate, body: value }
 
-    const data = await fetch(`http://localhost:5000/notes/${id}`, 
+    // console.log(`F value: ${value}`);
+
+    const res = await fetch(`http://localhost:5000/notes/body/${id}`, 
     {
       method: 'PUT',
       headers: {
@@ -73,9 +72,13 @@ function App() {
       body: JSON.stringify(updatedNote)
     });
 
+    const data = await res.json();
+
+    // console.log(`F data.body: ${data.body}`);
+
     setNotes(notes.map((note) => 
-      note.id === data.id ? 
-        {...noteToUpdate, body: value}
+      note._id === data._id ? 
+        {...note, body: data.body}
         : note
       )
     )
@@ -86,7 +89,7 @@ function App() {
     const noteToMove = await fetchNote(id);
     const movedNote = { ...noteToMove, x: e.clientX, y: e.clientY }
 
-    const res = await fetch(`http://localhost:5000/notes/${id}`, 
+    const res = await fetch(`http://localhost:5000/notes/position/${id}`, 
     {
       method: 'PUT',
       headers: {
@@ -98,7 +101,7 @@ function App() {
     const data = await res.json();
 
     setNotes(notes.map((note) => 
-      note.id === data.id ? 
+      note._id === data._id ? 
         {...note, x: data.x, y: data.y}
         : note
       )
@@ -111,7 +114,7 @@ function App() {
 
     const titledNote = { ...noteToTitle, title: title }
 
-    const res = await fetch(`http://localhost:5000/notes/${id}`, 
+    const res = await fetch(`http://localhost:5000/notes/title/${id}`, 
     {
       method: 'PUT',
       headers: {
@@ -123,7 +126,7 @@ function App() {
     const data = await res.json();
 
     setNotes(notes.map((note) => 
-     note.id === data.id ? 
+     note._id === data._id ? 
       {...note, title: data.title }
       : note
      )

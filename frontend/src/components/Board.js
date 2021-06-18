@@ -15,7 +15,7 @@ const Board = ({ notes, onAdd, onMove, onTitle, onEditBody }) => {
             <h1 className="board-title">Board</h1>
             
             {notes.map((note) => (
-                <Note key={note.id} note={note} onMove={onMove} onTitle={onTitle} onEditBody={onEditBody}/>
+                <Note key={note._id} note={note} onMove={onMove} onTitle={onTitle} onEditBody={onEditBody}/>
             ))}
         </div>
     );

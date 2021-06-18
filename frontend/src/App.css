@@ -38,21 +38,23 @@
   /* background-image: url('img/creampaper_bw.png');
   background-repeat: repeat; */
   max-width: 300px;
+  border-right: 4px solid transparent;
+  border-bottom: 4px solid transparent;
 }
 
 .yellow {
   /* background-color: #fffba2; */
-  border: 1px solid #fffba2;
+  border-color: #fffba2;
 }
 
 .pink {
   /* background-color: #ff7eb9; */
-  border: 1px solid #ff7eb9;
+  border-color: #ff7eb9;
 }
 
 .blue {
   /* background-color: #8efcff; */
-  border: 1px solid #8efcff;
+  border-color: #8efcff;
 }
 
 .note:hover {
@@ -95,9 +97,9 @@
   opacity: 1;
 }
 
-.ql-editor {
+/* .ql-editor {
   padding: 8px 10px;
-}
+} */
 
 
 /* quill */
@@ -132,7 +134,8 @@
   line-height: inherit;
 }
 
-.hideEditor .ql-editor p {
+.hideEditor .ql-editor * {
+  margin-top: 0 !important;
   /* margin-bottom: 10px; */
 }
 
@@ -142,7 +145,7 @@
 
 .hideEditor .ql-container.ql-snow {
   /* border:none; */
-  border: 1px solid transparent;
+  /* border: 1px solid transparent; */
   font-family: inherit;
   font-size: inherit;
 }

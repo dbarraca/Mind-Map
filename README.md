@@ -7,13 +7,20 @@ Mind Map is a note taking web application. Boards are a way to get a quick glanc
 ### Back-End
 - [x] Set up Mongo Database
 - [ ] Populate DB with Notes
-- [ ] Populate DB with first Board
-- [ ] Fetch Board and notes from DB
+    - [x] Implement posting notes
+    - [x] Post notes using postman
+    - [ ] Updating note titles
+    - [ ] Updating note bodies
+- [ ] Populate DB with first Board? or relate a board to notes
+- [ ] Fetch Board and notes from DB in front end
 - [ ] Remove JSON SERVER
 - [ ] Add Tag system
 - [ ] Add Description field
 
 ### Front-End
+- [ ] Add Redux to mangage state
+- [ ] Redo Note component now with Redux
+- [ ] Ensure Quill features are working 
 - [ ] Change color identification from bg to accent and border on hover
 - [ ] Set limit to board height and width
 - [ ] Create note color picker feature

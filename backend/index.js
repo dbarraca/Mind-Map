@@ -51,7 +51,7 @@ connection.once('open', () => {
 });
 
 // Note Routes
-var noteRouter = require('./routes/note');
+var noteRouter = require('./routes/notes');
 app.use('/notes', noteRouter);
 
 const port = process.env.PORT || 5000;

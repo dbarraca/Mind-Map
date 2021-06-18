@@ -10,11 +10,13 @@ const NoteSchema = new Schema({
     },
     body: {
         type: String,
-        required: true
+        required: false,
+        default: ""
     },
     color: {
         type: String,
-        required: false
+        required: false,
+        default: "yellow"
     },
     parentID: {
         type: Number,
