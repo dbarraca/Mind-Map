@@ -36,17 +36,15 @@ router.get('/:id', async (req, res) => {
     // .catch(err => res.status(400).json('Error: ' + err));
 });
 
-// @route POST /notes/add
+// @route POST /notes
 // @desc Create a Note
 // @access Public
-router.route('/add').post( async (req, res) => {
-    // console.log(req.body);
-    
+router.post('/', async (req, res) => {    
     const newNote = new Note({
         title: "",
         body: "",
         color: "yellow",
-        parentId: req.body.parentId,
+        parentID: req.body.parentID,
         x: req.body.x,
         y: req.body.y
     });
@@ -54,7 +52,7 @@ router.route('/add').post( async (req, res) => {
     try {
         await newNote.save();
 
-        return res.status(200).json(note);
+        return res.status(200).json(newNote);
     }
     catch (e) {
         return res.status(400).json({ msg: e.message });

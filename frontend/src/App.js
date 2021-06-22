@@ -32,23 +32,15 @@ function App() {
   }
 
   // Add new note 
-  const addNote = async (e) => {
-    const addedNote = {
-      title: "",
-      body: "",
-      color: "yellow",
-      parentId: 0,
-      x: e.clientX,
-      y: e.clientY
-    };
-
-    const res = await fetch(`http://localhost:5000/notes`,
+  const addNote = async (note) => {
+    // console.log(note);
+    const res = await fetch('http://localhost:5000/notes',
     {
       method: "POST",
       headers: {
         'Content-Type' : 'application/json'
       },
-      body: JSON.stringify(addedNote)
+      body: JSON.stringify(note)
     })
 
     const data = await res.json();
@@ -61,8 +53,6 @@ function App() {
     const noteToUpdate = await fetchNote(id);
     const updatedNote = { ...noteToUpdate, body: value }
 
-    // console.log(`F value: ${value}`);
-
     const res = await fetch(`http://localhost:5000/notes/body/${id}`, 
     {
       method: 'PUT',
@@ -74,8 +64,6 @@ function App() {
 
     const data = await res.json();
 
-    // console.log(`F data.body: ${data.body}`);
-
     setNotes(notes.map((note) => 
       note._id === data._id ? 
         {...note, body: data.body}
@@ -85,9 +73,9 @@ function App() {
   }
 
   // Move note location in board
-  const moveNote = async (e, id) => {
+  const moveNote = async (x, y, id) => {
     const noteToMove = await fetchNote(id);
-    const movedNote = { ...noteToMove, x: e.clientX, y: e.clientY }
+    const movedNote = { ...noteToMove, x: x, y: y }
 
     const res = await fetch(`http://localhost:5000/notes/position/${id}`, 
     {
@@ -133,9 +121,20 @@ function App() {
     )
   }
 
+  // Delete note 
+  const deleteNote = async (id) => {
+    await fetch(`http://localhost:5000/notes/${id}`, 
+    {
+      method: 'DELETE',
+    })
+
+    setNotes(notes.filter((note) => note._id !== id));  
+  }
+
   return (
     <div className="App">
-      <Board notes={notes} onAdd={addNote} onMove={moveNote} onTitle={titleNote} onEditBody={updateNoteBody}/>
+      <Board notes={notes} onAdd={addNote} onMove={moveNote} 
+      onTitle={titleNote} onEditBody={updateNoteBody} onDelete={deleteNote}/>
     </div>
   );
 };

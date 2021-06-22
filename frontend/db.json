@@ -1,7 +1,7 @@
 {
   "notes": [
     {
-      "id": 1,
+      "_id": 1,
       "title": "Grocery List",
       "color": "yellow",
       "x": 167,
@@ -10,7 +10,7 @@
       "body": "<p>Hello World!</p><p>acsaasc</p><p>Some initial <strong>bold</strong> text</p>"
     },
     {
-      "id": 2,
+      "_id": 2,
       "title": "Art Project",
       "color": "blue",
       "x": 1053,
@@ -19,7 +19,7 @@
       "body": "<p>Hello World!</p><p><br></p><p>Some initial <strong>bold</strong> text</p>"
     },
     {
-      "id": 3,
+      "_id": 3,
       "title": "Dentist Appointment",
       "color": "pink",
       "x": 845,
@@ -28,7 +28,7 @@
       "body": "<p>Hello World!</p><p><br></p><p>Some initial <strong>bold</strong> texta</p><p>ascsacaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaascasc</p>"
     },
     {
-      "id": 4,
+      "_id": 4,
       "title": "New Note",
       "body": "<p>HGsdv</p>",
       "color": "yellow",
@@ -37,7 +37,7 @@
       "y": 429
     },
     {
-      "id": 5,
+      "_id": 5,
       "title": "Make To Do Lists",
       "body": "<p><br></p>",
       "color": "yellow",
@@ -46,7 +46,7 @@
       "y": 650
     },
     {
-      "id": 6,
+      "_id": 6,
       "title": "Note here",
       "body": "<p><br></p>",
       "color": "yellow",

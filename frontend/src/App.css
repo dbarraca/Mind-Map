@@ -13,7 +13,8 @@
   margin: 0;
   box-shadow: 0 7px 7px -8px rgb(0 0 0 / 50%);
   text-align: center;
-  padding: .25em 0;
+  padding: .5em 0;
+  margin: 0 3rem;
   background-color: rgba(255, 255, 255, .1)
 }
 
@@ -25,12 +26,13 @@
   min-height: 2em;
   padding: 1em;
   padding: .5em;
+  padding: .25rem;
   box-shadow: 1px 2px 5px rgba(0,0,0,.35);
   background-color: #FFF;
   margin: 1em;
   border-radius: 3px;
   position: absolute;
-  transition: z-index .3s, opacity .6s, width .7s, height .7s;
+  transition: z-index .1s, opacity .4s, width .7s, height .7s;
   opacity: .95;
   display: flex;
   flex-direction: column;
@@ -40,6 +42,14 @@
   max-width: 300px;
   border-right: 4px solid transparent;
   border-bottom: 4px solid transparent;
+  z-index: 100;
+}
+
+.note-header {
+  display: flex;
+  border-bottom: 1px solid #CCC;
+  /* box-shadow: 0 2px 3px -2px rgba(0,0,0,.2); */
+
 }
 
 .yellow {
@@ -63,6 +73,7 @@
   /* width: 30em;
   height: 18em; */
   background-image: none;
+  z-index: 200;
 }
 
 .note .title {
@@ -74,14 +85,17 @@
   /* border-radius: 4px; */
   font-size: 16px;
   padding: 8px;
-  border-bottom: 1px solid #CCC;
-  /* box-shadow: 0 2px 3px -2px rgba(0,0,0,.2); */
+  flex: 1;
 }
 
 .note .title:focus {
   background-color: rgba(255,255,255,.5);
   border: 1px solid rgba(0,0,0,.25);
-} 
+}
+
+.close {
+  width: 20px;
+}
 
 .drag {
   height: 2em;
@@ -97,12 +111,36 @@
   opacity: 1;
 }
 
+/*Tiny MCE */
+.note .tox-tinymce {
+  z-index: 300;
+}
+
+.note .tox-tinymce {
+  border: none;
+}
+
+.note .tox .tox-statusbar {
+  display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 /* .ql-editor {
   padding: 8px 10px;
 } */
 
 
-/* quill */
+/* Quill */
 /* .ql-toolbar.ql-snow {
   border: 1px solid transparent;
 } */
@@ -127,16 +165,13 @@
 } */
 
 
-
-
+/*
 .hideEditor .ql-editor {
-  /* padding: 0; */
   line-height: inherit;
 }
 
 .hideEditor .ql-editor * {
   margin-top: 0 !important;
-  /* margin-bottom: 10px; */
 }
 
 .hideEditor .ql-toolbar {
@@ -144,13 +179,11 @@
 }
 
 .hideEditor .ql-container.ql-snow {
-  /* border:none; */
-  /* border: 1px solid transparent; */
+  border: 1px solid transparent;
   font-family: inherit;
   font-size: inherit;
 }
-
-
+*/
 
 
 /* .hideEditor.ql-editor {
