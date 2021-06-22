@@ -101,8 +101,8 @@
   height: 2em;
   width: 2em;
   position: absolute;
-  left: calc(-2em - 2px);
-  top: 0px;
+  left: calc(-1em - 8px);
+  top: calc(-1em - 8px);
   opacity: 0;
   transition: opacity .3s;
 }

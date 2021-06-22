@@ -1,5 +1,6 @@
 import { Editor } from '@tinymce/tinymce-react';
-import dragIcon from '../img/drag32.png';
+// import dragIcon from '../img/drag32.png';
+import dragIcon from '../img/drag_icon.svg';
 import closeIcon from '../img/close_icon.svg';
 import { useEffect, useState, useRef } from 'react';
 
