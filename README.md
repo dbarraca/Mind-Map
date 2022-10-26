@@ -2,8 +2,6 @@
 
 Mind Map is a note taking web application. Boards are a way to get a quick glance at your organized notes on a specific topic. Freely decide what notes go where. One useful feature allow you to open up note as boards themselves to see that note's sub-notes.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/QyL9Y9CyaVc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
 https://youtu.be/QyL9Y9CyaVc
 
 ## To-Do List
