@@ -18,20 +18,6 @@ app.use((req, res, next) => {
     next();
 });
 
-
-// // Set up DB for local deploy
-// let db = require('./config/keys').mongoURI;
-
-// // Connect to Mongo
-// mongoose.connect(db, 
-// {
-//     useUnifiedTopology: true,
-//     useNewUrlParser: true, 
-//     useCreateIndex: true
-// })
-// .then(() => console.log('MongoDB Connected...'))
-// .catch(err => console.log(err));
-
 const uri = process.env.ATLAS_URI;
 mongoose.connect(
     uri,

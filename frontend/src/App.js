@@ -50,9 +50,8 @@ function App() {
 
   // Edit note body
   const updateNoteBody = async (value, id) => {
-    const noteToUpdate = await fetchNote(id);
+    const noteToUpdate = await fetchNote(id); 
     const updatedNote = { ...noteToUpdate, body: value }
-
     const res = await fetch(`http://localhost:5000/notes/body/${id}`, 
     {
       method: 'PUT',
