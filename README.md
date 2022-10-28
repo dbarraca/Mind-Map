@@ -1,4 +1,5 @@
-# Mind-Map
+# Mind Map
+## https://youtu.be/QyL9Y9CyaVc
 
 Mind Map is a note taking web application. Boards are a way to get a quick glance at your organized notes on a specific topic. 
 - Double click the board to add a note.
